@@ -26,7 +26,6 @@ const main = async () => {
     entities: []
   })
   const orm = await MikroORM.init(microConfig);
-  // await orm.em.nativeDelete(User, {})
   orm.getMigrator().up();
 
   const app = express();
